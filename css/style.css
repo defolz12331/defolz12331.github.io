@@ -405,6 +405,7 @@ nav{
 	}
 
 	.skill_bar{
+		max-width: 720px;
 		grid-template-columns: 1fr;
 	}
 
