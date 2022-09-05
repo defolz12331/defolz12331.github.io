@@ -7,13 +7,9 @@
 	</head>
 
 	<body>
-		<div class="menu_burger">
-				<p>
-				</p>	
-		</div>
 		<header>
 			
-			<nav>
+			<nav id="menu">
 				
 				<div class="menu">
 					<ul class="menu_list">
@@ -27,8 +23,15 @@
 			</nav>
 
 			<section class="offer">
-				<div class="offer_block">
+				<div class="offer_block" id="offer_block">
 					<h1>Denis<br>Novik</h1>
+					<div class="offer_burger_container">
+						<button class="offer_burger" onclick="menu_mobile_open()">
+							<span class="header_burger_line"></span>
+							<span class="header_burger_line"></span>
+							<span class="header_burger_line"></span>
+						</button>
+					</div>
 					<p>UX | UI designer<br>
 					24 years old, Minsk</p>
 					<div id="language_buttons">
@@ -37,12 +40,35 @@
 						<label id="lang_checked_en" class="lang_checked language_selected"><input type="radio" class="translate" id="en" name="lang" value="ENG" checked="checked", onclick="lang_en()">ENG</label> 		
 					</div>
 				</div>
-
+				
 				<div class="offer_image">
 					<img src="svg/offer_image.svg">
 				</div>
-				<div class="offer_image_mobile">
+				<div class="offer_image_mobile" id="offer_image_mobile">
 					<img src="svg/offer_image_mobile.svg">
+				</div>
+
+				<div class="offer_menu_mobile" id="offer_menu_mobile">
+					<div class="offer_nav_wrapper">
+						<nav id="menu_mobile">
+							<ul id="menu_mobile_list">
+								<li><a id="menu_selected_mobile" class="lang" href="#" key="home_menu">Home</a></li>
+								<li><a href="#about_me" class="menu_mobile_link lang"  key="about_menu">About me</a></li>
+								<li><a href="#skills" class="menu_mobile_link lang"  key="skills_menu">Skills</a></li>
+								<li><a href="#portfolio" class="menu_mobile_link lang"  key="portfolio_menu">Portfolio</a></li>
+								<li><a href="#contacts" class="menu_mobile_link lang"  key="contacts_menu">Contacts</a></li>
+							</ul>
+						</nav>
+
+						<div class="menu_close_btn">
+							<button class="menu_close" onclick="menu_mobile_close()">
+								<svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="2.68701" width="27.3715" height="3.8" transform="rotate(45 2.68701 0)" fill="#828282"/>
+									<rect x="0.831299" y="19.5566" width="27.3715" height="3.8" transform="rotate(-45 0.831299 19.5566)" fill="#828282"/>
+								</svg>
+							</button>
+						</div>
+					</div>
 				</div>
 			</section>
 		</header>
@@ -297,6 +323,7 @@
 				</p>
 			</div>
 		</footer>
+		<script src="js/menu_mobile.js"></script>
 		<script src="js/radio_lang.js"></script>
 		<script src="js/jquery.min.js"></script>
 	</body>
