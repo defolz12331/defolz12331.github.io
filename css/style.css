@@ -409,9 +409,7 @@ nav{
 
 @media screen and (max-width: 1200px) {
 
-	#language_buttons{
-		display: none;
-	}
+	
 	header{
 		margin: 0 9vw 0 9vw;
 	}
